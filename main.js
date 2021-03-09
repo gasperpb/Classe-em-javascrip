@@ -15,8 +15,9 @@ class Alunos {
     }
 }
 
-function media() {
-    return ((n1 + n2) * 2.5 + trabalho * 2) / 7;
+
+//function media() {
+return ((n1 + n2) * 2.5 + trabalho * 2) / 7;
 }
 
 function aFinal() {
