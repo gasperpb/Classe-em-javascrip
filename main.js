@@ -5,26 +5,28 @@
 
 
 class Alunos {
-    constructor(matricula, nome, n1, n2, trabalho) {
 
+    constructor(matricula, nome, n1, n2, trabalho) {
         matricula = this.matricula
         nome = this.nome
         n1 = this.n1
         n2 = this.n2
         trabalho = this.trabalho
+
+        //  return media((n1 + n2) * 2.5 + trabalho * 2) / 7;
     }
+
 }
 
 
 //function media() {
-return ((n1 + n2) * 2.5 + trabalho * 2) / 7;
-}
+var Aluno = new Alunos(123, "Léo", 8, 1, 5);
+//var media = ((n1 + n2) * 2.5 + trabalho * 2) / 7
 
 function aFinal() {
     media = media();
     if (media < 2.5 || media >= 5)
         return 0;
-
     return 10 - media;
 }
 
@@ -40,5 +42,7 @@ function aFinal() {
 // }
 
 //Utilização
-Aluno eu = new Aluno(123, "Léo", 8, 1, 5);
-System.out.println("A média é: " + round(eu.media(), 2) + " e é necessário mais " + round(eu.aFinal(), 2) + " para ser aprovado.");
+
+
+
+console.log(Aluno);
