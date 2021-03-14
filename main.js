@@ -7,42 +7,24 @@
 class Alunos {
 
     constructor(matricula, nome, n1, n2, trabalho) {
-        matricula = this.matricula
-        nome = this.nome
-        n1 = this.n1
-        n2 = this.n2
-        trabalho = this.trabalho
-
-        //  return media((n1 + n2) * 2.5 + trabalho * 2) / 7;
+        this.matricula = matricula
+        this.nome = nome
+        this.n1 = n1
+        this.n2 = n2
+        this.trabalho = trabalho
     }
-
+    get media() {
+        return this.calcularMedia()
+    }
+    calcularMedia() {
+        return ((this.n1 + this.n2) * 2.5 + this.trabalho * 2) / 7;
+    }
+    get final() {
+        if (this.media < 2.5 || this.media >= 5)
+            return 0
+        return 10 - this.media
+    }
 }
+let achilles = new Alunos(123, "Achilles", 3, 3, 5);
 
-
-//function media() {
-var Aluno = new Alunos(123, "Léo", 8, 1, 5);
-//var media = ((n1 + n2) * 2.5 + trabalho * 2) / 7
-
-function aFinal() {
-    media = media();
-    if (media < 2.5 || media >= 5)
-        return 0;
-    return 10 - media;
-}
-
-
-//Para deixar o resultado para apenas duas casas decimais:
-// public static double round(double value, int places) {
-//     if (places < 0) throw new IllegalArgumentException();
-
-//     long factor = (long) Math.pow(10, places);
-//     value = value * factor;
-//     long tmp = Math.round(value);
-//     return (double) tmp / factor;
-// }
-
-//Utilização
-
-
-
-console.log(Aluno);
+console.log(achilles.media + "  final  " + achilles.final)
